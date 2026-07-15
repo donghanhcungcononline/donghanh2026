@@ -760,3 +760,32 @@ section { padding: 64px 0; }
   margin-left: auto;
   margin-right: auto;
 }
+.filters-wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.filters-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.filter-count {
+  font-size: 13px;
+  color: var(--ink-faint);
+  margin-left: auto;
+}
+
+@media (max-width: 640px) {
+  .filters-wrap {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .filter-count {
+    text-align: right;
+  }
+}

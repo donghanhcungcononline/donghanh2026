@@ -278,173 +278,41 @@
       flex-direction: column;
       align-items: center;
     }
-/* ============================================================
-   HEARTBREAK REVELATION — GIỮ NGUYÊN VĂN, NỔI BẬT
-   ============================================================ */
-
-.heartbreak-revelation {
+.truth-section {
   background: #0d0d0d;
-  border-radius: 16px;
-  padding: 36px 40px 32px;
-  margin: 2.8em 0;
+  border-radius: 12px;
+  padding: 28px 32px 24px;
+  margin: 2.5em 0;
   border-left: 6px solid #c0392b;
-  border-top: 1px solid rgba(192, 57, 43, 0.08);
-  border-right: 1px solid rgba(192, 57, 43, 0.08);
-  border-bottom: 1px solid rgba(192, 57, 43, 0.08);
-  box-shadow: 0 12px 48px rgba(0,0,0,0.5), inset 0 0 60px rgba(192, 57, 43, 0.02);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
 }
 
-/* ---- Dòng mở đầu ---- */
-.revelation-opening {
-  font-size: 22px;
-  line-height: 1.7;
-  color: #f0ebe4;
-  font-family: var(--font-display);
-  font-weight: 600;
-  margin: 0 0 20px;
-  padding-bottom: 18px;
-  border-bottom: 2px solid rgba(192, 57, 43, 0.08);
-}
-
-/* ---- Đoạn thân ---- */
-.revelation-body {
+.truth-p {
   font-size: 17px;
   line-height: 1.8;
   color: #d4cdc4;
-  margin: 0 0 24px;
+  margin: 0 0 16px;
 }
+.truth-p:last-child { margin-bottom: 0; }
+.truth-p strong { color: #f0ebe4; }
 
-.revelation-note {
-  color: #a0988a;
-  font-style: italic;
-  display: block;
-  padding-left: 20px;
-  margin: 6px 0 4px;
-  border-left: 3px solid rgba(192, 57, 43, 0.12);
-}
-
-/* ---- KHỐI CHUYỂN BIẾN - NỔI BẬT NHẤT ---- */
-.transformation-block {
-  background: linear-gradient(145deg, #0f0f0f, #080808);
-  padding: 24px 28px;
-  border-radius: 12px;
-  border: 1px solid rgba(192, 57, 43, 0.08);
+.truth-box {
+  background: #080808;
+  padding: 20px 24px 16px;
+  border-radius: 8px;
   border-left: 4px solid #c0392b;
   margin-top: 4px;
 }
 
-.transformation-line {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #d4cdc4;
-  margin: 0 0 14px;
+@media (max-width: 640px) {
+  .truth-section { padding: 18px 16px 16px; }
+  .truth-p { font-size: 15px; }
+  .truth-box { padding: 14px 14px 12px; }
+  .truth-box .truth-p { font-size: 16px !important; }
+  .truth-box .truth-p:last-child { font-size: 17px !important; }
+  .truth-box .truth-p:last-child span { font-size: 20px !important; }
 }
-
-.transformation-line:last-of-type {
-  margin-bottom: 0;
-}
-
-.transformation-final-line {
-  font-size: 20px;
-  line-height: 1.8;
-  color: #f0ebe4;
-  margin: 16px 0 0;
-  padding-top: 16px;
-  border-top: 2px solid rgba(192, 57, 43, 0.06);
-  text-align: center;
-  font-family: var(--font-display);
-}
-
-/* ---- CÁC HIỆU ỨNG NHẤN MẠNH ---- */
-.text-emphasis-red {
-  color: #e2846c;
-  font-weight: 700;
-}
-
-.text-emphasis-red-big {
-  color: #e2846c;
-  font-size: 26px;
-  font-weight: 900;
-  display: inline-block;
-  background: rgba(192, 57, 43, 0.06);
-  padding: 0 12px;
-  border-radius: 4px;
-}
-
-.text-emphasis-bold {
-  color: #f0ebe4;
-  font-weight: 700;
-}
-
-.text-emphasis-underline {
-  color: #f0ebe4;
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: #e2846c;
-  text-underline-offset: 4px;
-}
-
-/* ---- RESPONSIVE ---- */
-@media (max-width: 768px) {
-  .heartbreak-revelation {
-    padding: 24px 20px 20px;
   }
-  
-  .revelation-opening {
-    font-size: 19px;
-  }
-  
-  .revelation-body {
-    font-size: 15px;
-  }
-  
-  .transformation-line {
-    font-size: 16px;
-  }
-  
-  .transformation-final-line {
-    font-size: 17px;
-  }
-  
-  .text-emphasis-red-big {
-    font-size: 22px;
-  }
-}
-
-@media (max-width: 480px) {
-  .heartbreak-revelation {
-    padding: 18px 14px 16px;
-    border-left-width: 4px;
-  }
-  
-  .revelation-opening {
-    font-size: 16px;
-  }
-  
-  .revelation-body {
-    font-size: 14px;
-  }
-  
-  .revelation-note {
-    padding-left: 12px;
-  }
-  
-  .transformation-block {
-    padding: 16px 16px;
-  }
-  
-  .transformation-line {
-    font-size: 14px;
-  }
-  
-  .transformation-final-line {
-    font-size: 15px;
-  }
-  
-  .text-emphasis-red-big {
-    font-size: 18px;
-  }
-}
 </style>
 </head>
 <body>
@@ -530,38 +398,38 @@
   </div>
 
   <p>Khi tôi nghe cậu kể đến đây tôi đã rụng rời tay chân, và tôi nghĩ tôi phải lập tức báo với tổng đài 111, báo với cơ quan chính quyền, vì lúc này không còn là chuyện tham vấn cho cậu bé nữa mà nó đã liên quan đến hành vi dâm ô, lạm dụng trẻ em rồi.</p>
-<!-- ===== PHẦN CHUYỂN BIẾN ĐAU LÒNG - GIỮ NGUYÊN VĂN ===== -->
-<div class="heartbreak-revelation">
-  
-  <!-- Dòng mở đầu - nổi bật nhất -->
-  <p class="revelation-opening">
-    Thế nên, điều đau lòng đáng sợ nhất mà tôi lo lắng ngay từ lần đầu tiên nghe cậu bé kể <span class="text-emphasis-red">đã xảy ra</span>: 
-    <span class="text-emphasis-bold">thái độ của mẹ cậu khi cậu có hành động sai trái lần đầu đã thành sự thật.</span>
+
+    <div class="truth-section">
+
+  <p class="truth-p">
+    Thế nên, <strong>điều đau lòng đáng sợ nhất</strong> mà tôi lo lắng ngay từ lần đầu tiên nghe cậu bé kể <strong style="color:#e2846c;">đã xảy ra</strong>: 
+    <strong>thái độ của mẹ cậu khi cậu có hành động sai trái lần đầu đã thành sự thật.</strong>
   </p>
 
-  <!-- Đoạn thứ hai - dẫn chứng -->
-  <p class="revelation-body">
-    Ngay trong lần kể chuyện đầu tiên, cậu bé đã miêu tả rằng <span class="text-emphasis-red">mẹ cậu cũng có phản ứng sinh lý</span> với những lần sờ soạng của cậu. 
-    <span class="revelation-note">Nhưng tôi không dám đào sâu vào phần đó, vì tôi không muốn góp phần vào nhận định rằng mẹ cậu đã hùa theo hành động của cậu, để cậu kéo dài sai trái suốt 2 năm trời.</span> 
-    Mục tiêu của tôi lúc đó chỉ là <span class="text-emphasis-underline">kéo cậu bé ra khỏi vũng lầy tăm tối ấy</span>.
+  <p class="truth-p">
+    Ngay trong lần kể chuyện đầu tiên, cậu bé đã miêu tả rằng <strong style="color:#e2846c;">mẹ cậu cũng có phản ứng sinh lý</strong> với những lần sờ soạng của cậu. 
+    <span style="display:block; color:#a0988a; font-style:italic; padding-left:18px; border-left:3px solid rgba(192,57,43,0.15); margin:4px 0 4px;">
+      Nhưng tôi không dám đào sâu vào phần đó, vì tôi không muốn góp phần vào nhận định rằng mẹ cậu đã hùa theo hành động của cậu, để cậu kéo dài sai trái suốt 2 năm trời.
+    </span> 
+    Mục tiêu của tôi lúc đó chỉ là <strong>kéo cậu bé ra khỏi vũng lầy tăm tối ấy</strong>.
   </p>
 
-  <!-- SỰ CHUYỂN BIẾN - ĐẬM NHẤT -->
-  <div class="transformation-block">
-    <p class="transformation-line">
-      Nhưng rồi, <span class="text-emphasis-bold">mẹ cậu bé đã tự biến bản thân từ một nạn nhân bị con trai sàm sỡ thành thủ phạm dâm ô chính con mình.</span>
+  <div class="truth-box">
+    <p class="truth-p" style="font-size:18px;">
+      Nhưng rồi, <strong>mẹ cậu bé đã tự biến bản thân từ một nạn nhân bị con trai sàm sỡ thành thủ phạm dâm ô chính con mình.</strong>
     </p>
     
-    <p class="transformation-line">
-      Khi cậu đã muốn dừng lại, đã xin ngủ riêng để tách ra khỏi sai trái, <span class="text-emphasis-red">thì người mẹ không chỉ không tạo điều kiện cho con ra phòng riêng, mà còn chủ động dâm ô ngược lại con</span>, kéo cậu trở lại vòng xoáy.
+    <p class="truth-p" style="font-size:18px;">
+      Khi cậu đã muốn dừng lại, đã xin ngủ riêng để tách ra khỏi sai trái, <strong style="color:#e2846c;">thì người mẹ không chỉ không tạo điều kiện cho con ra phòng riêng, mà còn chủ động dâm ô ngược lại con</strong>, kéo cậu trở lại vòng xoáy.
     </p>
     
-    <p class="transformation-final-line">
-      <span class="text-emphasis-bold">Thay vì bảo vệ con, bà lại trở thành người tiếp tục duy trì điều <span class="text-emphasis-red-big">kinh tởm</span> đó.</span>
+    <p class="truth-p" style="font-size:20px; text-align:center; padding-top:12px; border-top:2px solid rgba(192,57,43,0.08); color:#f0ebe4;">
+      <strong>Thay vì bảo vệ con, bà lại trở thành người tiếp tục duy trì điều <span style="color:#e2846c; font-size:26px;">kinh tởm</span> đó.</strong>
     </p>
   </div>
-
 </div>
+</div>
+    
 <div class="image-placeholder" style="padding:20px;">
   <p style="font-weight:600; color:#2c2c2c; margin-bottom:12px; text-align:center;">📱 Toàn bộ tin nhắn</p>
   <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; max-width:600px; margin:0 auto;">

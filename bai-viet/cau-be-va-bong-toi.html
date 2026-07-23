@@ -278,7 +278,224 @@
       flex-direction: column;
       align-items: center;
     }
+    .turning-point {
+    background: #fcfaf7;
+    border-radius: var(--radius);
+    margin: 2.5em 0;
+    overflow: hidden;
+    border: 1px solid #e8e3dd;
   }
+
+  .turning-header {
+    background: #1a1a1a;
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-bottom: 3px solid #c0392b;
+  }
+
+  .turning-icon {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .turning-header h2 {
+    margin: 0;
+    color: #f0ebe4;
+    font-size: 22px;
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+
+  .turning-content {
+    padding: 28px 28px 8px;
+  }
+
+  .turning-lead {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #1a1a1a;
+    font-family: var(--font-display);
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .turning-revelation {
+    background: #f5f0eb;
+    padding: 20px 24px;
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+    border-left: 4px solid var(--coral);
+  }
+
+  .revelation-text {
+    font-size: 17px;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+
+  .revelation-text strong {
+    color: #c0392b;
+  }
+
+  .revelation-note {
+    font-size: 15px;
+    color: #5a524a;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .revelation-note strong {
+    color: #1a1a1a;
+    font-style: normal;
+  }
+
+  .transformation-box {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 16px;
+    align-items: center;
+    margin: 24px 0 28px;
+    background: #f0ebe4;
+    border-radius: var(--radius);
+    padding: 20px 24px;
+  }
+
+  .before-box,
+  .after-box {
+    padding: 16px 18px;
+    border-radius: var(--radius);
+    text-align: center;
+  }
+
+  .before-box {
+    background: #e8e3dd;
+  }
+
+  .after-box {
+    background: #2c2c2c;
+  }
+
+  .after-box p {
+    color: #d4cdc4;
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+  }
+
+  .badge.victim {
+    background: #d4cdc4;
+    color: #5a524a;
+  }
+
+  .badge.perpetrator {
+    background: #c0392b;
+    color: #fff;
+  }
+
+  .before-box p,
+  .after-box p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .before-box p {
+    color: #2c2c2c;
+  }
+
+  .arrow-transformation {
+    font-size: 28px;
+    color: #c0392b;
+    font-weight: 700;
+    padding: 0 4px;
+  }
+
+  .turning-conclusion {
+    margin-top: 8px;
+  }
+
+  .conclusion-highlight {
+    background: #1a1a1a;
+    color: #f0ebe4;
+    padding: 24px 28px;
+    border-radius: var(--radius);
+    border-left: 4px solid #c0392b;
+  }
+
+  .conclusion-highlight p {
+    margin: 0 0 12px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #d4cdc4;
+  }
+
+  .conclusion-highlight p:last-child {
+    margin-bottom: 0;
+  }
+
+  .conclusion-highlight strong {
+    color: #fff;
+  }
+
+  .text-red {
+    color: #e2846c !important;
+    font-weight: 700;
+  }
+
+  .final-line {
+    font-size: 18px !important;
+    font-family: var(--font-display);
+  }
+
+  @media (max-width: 640px) {
+    .transformation-box {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 16px;
+    }
+    .arrow-transformation {
+      transform: rotate(90deg);
+      padding: 0;
+    }
+    .turning-header {
+      padding: 14px 18px;
+      flex-wrap: wrap;
+    }
+    .turning-header h2 {
+      font-size: 18px;
+    }
+    .turning-content {
+      padding: 18px 16px 4px;
+    }
+    .turning-lead {
+      font-size: 17px;
+    }
+    .conclusion-highlight {
+      padding: 18px 18px;
+    }
+    .conclusion-highlight p {
+      font-size: 15px;
+    }
+    .final-line {
+      font-size: 16px !important;
+    }
+    .before-box p,
+    .after-box p {
+      font-size: 14px;
+    }
+  }
+</style>
 </style>
 </head>
 <body>
@@ -365,10 +582,57 @@
 
   <p>Khi tôi nghe cậu kể đến đây tôi đã rụng rời tay chân, và tôi nghĩ tôi phải lập tức báo với tổng đài 111, báo với cơ quan chính quyền, vì lúc này không còn là chuyện tham vấn cho cậu bé nữa mà nó đã liên quan đến hành vi dâm ô, lạm dụng trẻ em rồi.</p>
 
-  <div class="scream-quote">
-    "Thế nên, điều đau lòng đáng sợ nhất mà tôi lo lắng ngay từ lần đầu tiên nghe cậu bé kể đã xảy ra vế thái độ của mẹ cậu khi cậu có hành động sai trái lần đầu tiên đã thành sự thật (vì ngay lúc cậu bé kể chuyện lần đầu, cậu bé đã miêu tả lại, tôi đã có thể hiểu được những lần mẹ cậu bé cũng có phản ứng sinh lý với những cái lần sờ soạng của cậu, nhưng tôi không dám đào sâu vào phần này vì không muốn góp phần vào những nhận định rằng mẹ cậu bé cũng đã đưa bản thân hùa theo hành động của cậu, nên mới để cậu bé kéo dài hành động suốt 2 năm trời, mà tôi vẫn muốn tập trung vào mục tiêu kéo cậu bé ra khỏi vũng lầy tăm tối ấy... Nhưng rồi, mẹ cậu bé tự biến bản thân từ nạn nhân bị con trai sàm sỡ thành thủ phạm dâm ô chính con trai của mình <strong>khi cậu đã muốn dừng lại, đã xin ngủ riêng để tách ra khỏi hành động sai trái luân thường đạo lý, thì người mẹ không chỉ không tạo điều kiện cho con ra phòng riêng, mà còn chủ động tìm cách dâm ô ngược lại con mình, kéo cậu trở lại vòng xoáy.</strong> Thay vì bảo vệ con, bà lại trở thành người tiếp tục duy trì điều kinh tởm đó."
-    <small>— Sophia</small>
+  <!-- ===== PHẦN CHUYỂN BIẾN ĐAU LÒNG ===== -->
+<div class="turning-point">
+  
+  <div class="turning-header">
+    <span class="turning-icon">💔</span>
+    <h2>Sự thật đau lòng đã đến</h2>
   </div>
+
+  <div class="turning-content">
+    <p class="turning-lead">
+      Thế nên, điều đau lòng đáng sợ nhất mà tôi lo lắng ngay từ lần đầu tiên nghe cậu bé kể <strong>đã xảy ra</strong>.
+    </p>
+
+    <div class="turning-revelation">
+      <p class="revelation-text">
+        Ngay trong lần kể chuyện đầu tiên, cậu bé đã miêu tả rằng <strong>mẹ cậu cũng có phản ứng sinh lý</strong> với những lần sờ soạng của cậu.
+      </p>
+      <p class="revelation-note">
+        Nhưng tôi <em>không dám đào sâu</em> vào phần đó. Vì tôi không muốn góp phần vào nhận định rằng mẹ cậu đã hùa theo hành động của cậu, để cậu kéo dài sai trái suốt 2 năm trời. Mục tiêu của tôi lúc đó chỉ là <strong>kéo cậu bé ra khỏi vũng lầy tăm tối ấy</strong>.
+      </p>
+    </div>
+
+    <div class="transformation-box">
+      <div class="before-box">
+        <span class="badge victim">😔 Nạn nhân thụ động</span>
+        <p>Im lặng khi bị sờ soạng<br>
+        <span style="font-size:14px; color:#7a6f66;">— Có lẽ được thỏa mãn sau bao năm không có chồng</span></p>
+      </div>
+      
+      <div class="arrow-transformation">⬇️</div>
+      
+      <div class="after-box">
+        <span class="badge perpetrator">🔥 Thủ phạm chủ động</span>
+        <p>Chủ động dâm ô ngược lại con mình<br>
+        <span style="font-size:14px; color:#d4cdc4;">— Khi cậu muốn dừng lại, bà đã kéo cậu trở lại</span></p>
+      </div>
+    </div>
+
+    <div class="turning-conclusion">
+      <div class="conclusion-highlight">
+        <p>
+          <strong>Khi cậu đã muốn dừng lại</strong>, đã xin ngủ riêng để tách ra khỏi sai trái luân thường đạo lý, thì người mẹ không chỉ không tạo điều kiện cho con ra phòng riêng, mà còn <strong class="text-red">chủ động dâm ô ngược lại con mình</strong>, kéo cậu trở lại vòng xoáy.
+        </p>
+        <p class="final-line">
+          Thay vì bảo vệ con, bà lại trở thành người tiếp tục duy trì điều <span class="text-red">kinh tởm</span> đó.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ===== KẾT THÚC PHẦN CHUYỂN BIẾN ===== -->
 
  <<!-- PHẦN ẢNH 1 -->
 <div class="image-placeholder" style="padding:20px;">

@@ -279,372 +279,392 @@
       align-items: center;
     }
 /* ============================================================
-   TURNING POINT — Sự chuyển biến đau lòng (VERSION NỔI BẬT)
+   SHOCK BOX — Sự chuyển biến đau lòng (VERSION BÙNG NỔ)
    ============================================================ */
 
-.turning-point {
-  background: #fcfaf7;
+.shock-box {
+  background: #0d0d0d;
   border-radius: 16px;
   margin: 2.8em 0;
   overflow: hidden;
-  border: 1px solid #e0d6cc;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  border: 2px solid #2a1a1a;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.6), inset 0 0 60px rgba(192, 57, 43, 0.03);
 }
 
-/* HEADER - NỔI BẬT VỚI MÀU ĐỎ ĐẬM */
-.turning-header {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2c1818 100%);
-  padding: 20px 32px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
+/* ===== HEADER ===== */
+.shock-header {
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a0a0a 100%);
+  padding: 22px 32px;
   border-bottom: 4px solid #c0392b;
+  text-align: center;
+  position: relative;
 }
 
-.turning-icon {
-  font-size: 32px;
-  line-height: 1;
-  animation: pulse-icon 2s ease-in-out infinite;
+.shock-header::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #c0392b, transparent);
+  opacity: 0.3;
 }
 
-@keyframes pulse-icon {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-}
-
-.turning-header h2 {
-  margin: 0;
-  color: #f0ebe4;
-  font-size: 24px;
-  font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-shadow: 0 2px 8px rgba(192, 57, 43, 0.3);
-}
-
-.turning-header h2::after {
-  content: " — KHÔNG THỂ TIN ĐƯỢC";
-  font-size: 14px;
-  color: #c0392b;
-  font-weight: 600;
-  letter-spacing: 2px;
+.shock-icon {
   display: block;
-  font-family: var(--font-body);
-  margin-top: 2px;
+  font-size: 40px;
+  margin-bottom: 6px;
+  animation: shock-pulse 2s ease-in-out infinite;
 }
 
-/* NỘI DUNG CHÍNH */
-.turning-content {
-  padding: 32px 32px 12px;
+@keyframes shock-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
 }
 
-.turning-lead {
-  font-size: 21px;
-  line-height: 1.7;
-  color: #1a1a1a;
+.shock-title {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+  color: #f0ebe4;
+  letter-spacing: 3px;
   font-family: var(--font-display);
-  font-weight: 700;
-  margin-bottom: 22px;
-  padding-left: 4px;
-  border-left: 4px solid #c0392b;
-  padding-left: 20px;
+  text-shadow: 0 0 30px rgba(192, 57, 43, 0.15);
 }
 
-/* BOX TIẾT LỘ - NỔI BẬT VỚI NỀN ĐỎ NHẠT + VIỀN ĐỎ */
-.turning-revelation {
-  background: #fdf6f3;
-  padding: 24px 28px;
-  border-radius: 12px;
-  margin-bottom: 28px;
-  border-left: 6px solid #c0392b;
-  border-right: 1px solid #f0e0d8;
-  border-top: 1px solid #f0e0d8;
-  border-bottom: 1px solid #f0e0d8;
-  box-shadow: inset 0 2px 12px rgba(192, 57, 43, 0.04);
-}
-
-.revelation-text {
+.shock-title::before {
+  content: "🔥 ";
   font-size: 18px;
-  color: #1a1a1a;
-  margin-bottom: 10px;
-  font-weight: 500;
-  line-height: 1.6;
 }
 
-.revelation-text strong {
+.shock-title::after {
+  content: " 🔥";
+  font-size: 18px;
+}
+
+.shock-sub {
+  display: block;
+  font-size: 13px;
   color: #c0392b;
-  font-weight: 700;
-  background: rgba(192, 57, 43, 0.08);
-  padding: 2px 8px;
-  border-radius: 4px;
-}
-
-.revelation-note {
-  font-size: 15.5px;
-  color: #5a4a42;
-  font-style: italic;
-  margin: 0;
-  padding-top: 12px;
-  border-top: 1px dashed #e8ddd5;
-}
-
-.revelation-note strong {
-  color: #1a1a1a;
-  font-style: normal;
+  letter-spacing: 4px;
   font-weight: 600;
+  margin-top: 4px;
+  font-family: var(--font-body);
 }
 
-/* TRANSFORMATION BOX - ĐẬM NÉT HƠN */
-.transformation-box {
+/* ===== BODY ===== */
+.shock-body {
+  padding: 28px 32px 12px;
+  background: #0d0d0d;
+}
+
+/* LEAD - NỔI BẬT */
+.shock-lead {
+  font-size: 22px;
+  line-height: 1.7;
+  color: #f0ebe4;
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding: 16px 20px;
+  background: rgba(192, 57, 43, 0.06);
+  border-radius: 8px;
+  border-left: 5px solid #c0392b;
+}
+
+.shock-underline {
+  text-decoration: underline;
+  text-decoration-color: #c0392b;
+  text-underline-offset: 4px;
+}
+
+.shock-highlight-text {
+  color: #c0392b;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+/* REVEAL - NỀN ĐỎ NHẠT */
+.shock-reveal {
+  background: #1a0f0f;
+  padding: 22px 26px;
+  border-radius: 10px;
+  margin-bottom: 28px;
+  border: 1px solid rgba(192, 57, 43, 0.15);
+  border-left: 5px solid #c0392b;
+}
+
+.shock-reveal p {
+  margin: 0 0 10px;
+  font-size: 17px;
+  color: #d4cdc4;
+  line-height: 1.7;
+}
+
+.shock-reveal p:last-child {
+  margin-bottom: 0;
+}
+
+.shock-reveal strong {
+  color: #f0ebe4;
+}
+
+.shock-reveal-note {
+  font-style: italic;
+  color: #b0a090 !important;
+  padding-top: 12px;
+  border-top: 1px solid rgba(192, 57, 43, 0.08);
+}
+
+.shock-reveal-note em {
+  color: #c0392b;
+  font-style: italic;
+}
+
+/* ===== TRANSFORMATION - 2 Ô TƯƠNG PHẢN ===== */
+.shock-transformation {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  gap: 20px;
+  gap: 16px;
   align-items: stretch;
-  margin: 28px 0 32px;
-  border-radius: 12px;
-  padding: 0;
-  background: transparent;
+  margin: 24px 0 28px;
 }
 
-.before-box,
-.after-box {
-  padding: 20px 22px;
-  border-radius: 12px;
+.shock-before,
+.shock-after {
+  padding: 20px 18px;
+  border-radius: 10px;
   text-align: center;
-  transition: transform 0.2s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 120px;
+  min-height: 140px;
 }
 
-.before-box {
-  background: linear-gradient(145deg, #f5f0eb, #ece4dc);
-  border: 2px solid #d4c8bc;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+.shock-before {
+  background: linear-gradient(145deg, #1a1512, #2a1f1a);
+  border: 2px solid #3a2f2a;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.3);
 }
 
-.before-box:hover {
-  transform: scale(1.01);
+.shock-after {
+  background: linear-gradient(145deg, #1a0808, #2a0a0a);
+  border: 2px solid #6a1a1a;
+  box-shadow: 0 0 30px rgba(192, 57, 43, 0.08), inset 0 2px 8px rgba(0,0,0,0.4);
 }
 
-.after-box {
-  background: linear-gradient(145deg, #2c1818, #1a0f0f);
-  border: 2px solid #8b2d2d;
-  box-shadow: 0 4px 24px rgba(192, 57, 43, 0.15);
-}
-
-.after-box:hover {
-  transform: scale(1.01);
-}
-
-.badge {
-  display: inline-block;
+.shock-badge {
   font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
+  font-weight: 700;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 6px 20px;
+  padding: 6px 16px;
   border-radius: 999px;
   margin-bottom: 10px;
+  text-align: center;
+  line-height: 1.4;
 }
 
-.badge.victim {
-  background: #d4c8bc;
-  color: #4a3d35;
-}
-
-.badge.perpetrator {
-  background: #c0392b;
-  color: #fff;
-  box-shadow: 0 2px 12px rgba(192, 57, 43, 0.3);
-}
-
-.before-box p,
-.after-box p {
-  margin: 0;
+.shock-badge span {
   font-size: 16px;
-  font-weight: 600;
-  line-height: 1.6;
-}
-
-.before-box p {
-  color: #2c1f18;
-}
-
-.after-box p {
-  color: #f0e4d8;
-}
-
-.after-box p span {
-  color: #c0392b;
-  font-weight: 700;
-}
-
-.before-box .sub-note,
-.after-box .sub-note {
-  font-size: 13.5px;
-  font-weight: 400;
-  margin-top: 6px;
+  font-weight: 800;
   display: block;
 }
 
-.before-box .sub-note {
-  color: #7a6a5a;
-}
-
-.after-box .sub-note {
-  color: #9a8a7a;
-}
-
-/* MŨI TÊN CHUYỂN ĐỔI - NỔI BẬT HƠN */
-.arrow-transformation {
-  font-size: 36px;
-  color: #c0392b;
-  font-weight: 700;
-  padding: 0 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: arrow-bounce 2s ease-in-out infinite;
-  text-shadow: 0 0 20px rgba(192, 57, 43, 0.15);
-}
-
-@keyframes arrow-bounce {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(6px); }
-}
-
-/* KẾT LUẬN - NỔI BẬT NHẤT */
-.turning-conclusion {
-  margin-top: 8px;
-}
-
-.conclusion-highlight {
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-  color: #f0ebe4;
-  padding: 28px 32px;
-  border-radius: 12px;
-  border-left: 6px solid #c0392b;
-  box-shadow: 0 8px 32px rgba(192, 57, 43, 0.12);
-  position: relative;
-  overflow: hidden;
-}
-
-.conclusion-highlight::before {
-  content: "⚠️";
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  font-size: 64px;
-  opacity: 0.04;
-  pointer-events: none;
-}
-
-.conclusion-highlight p {
-  margin: 0 0 14px;
-  font-size: 18px;
-  line-height: 1.8;
+.before-badge {
+  background: #3a2f2a;
   color: #d4cdc4;
 }
 
-.conclusion-highlight p:last-child {
-  margin-bottom: 0;
+.before-badge span {
+  color: #f0ebe4;
 }
 
-.conclusion-highlight strong {
-  color: #fff;
+.after-badge {
+  background: #6a1a1a;
+  color: #f0d0c0;
+  box-shadow: 0 2px 16px rgba(192, 57, 43, 0.15);
+}
+
+.after-badge span {
+  color: #ff6b5a;
+}
+
+.shock-desc {
+  font-size: 15px;
+  font-weight: 500;
+  color: #d4cdc4;
+  line-height: 1.5;
+}
+
+.shock-desc-note {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #7a6a5a;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.shock-before .shock-desc {
+  color: #d4cdc4;
+}
+
+/* MŨI TÊN */
+.shock-arrow {
+  font-size: 40px;
+  color: #c0392b;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: shock-arrow 2s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(192, 57, 43, 0.2);
 }
 
-.text-red {
+@keyframes shock-arrow {
+  0%, 100% { transform: translateX(0); opacity: 0.7; }
+  50% { transform: translateX(8px); opacity: 1; }
+}
+
+/* ===== KẾT LUẬN - NỀN ĐEN + CHỮ TRẮNG ĐỎ ===== */
+.shock-final {
+  background: linear-gradient(145deg, #080808, #0a0606);
+  padding: 28px 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(192, 57, 43, 0.12);
+  border-left: 5px solid #c0392b;
+  margin-top: 8px;
+  box-shadow: inset 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.shock-final-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #d4cdc4;
+  margin: 0 0 16px;
+}
+
+.shock-warning-mark {
+  font-size: 28px;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.shock-final-highlight {
+  color: #f0ebe4;
+  font-weight: 700;
+  background: rgba(192, 57, 43, 0.1);
+  padding: 2px 10px;
+  border-radius: 4px;
+}
+
+.shock-final-danger {
   color: #e2846c !important;
-  font-weight: 700;
+  font-weight: 800 !important;
   font-size: 19px;
+  background: rgba(192, 57, 43, 0.08);
+  padding: 2px 12px;
+  border-radius: 4px;
 }
 
-.final-line {
+.shock-final-line {
   font-size: 20px !important;
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   color: #f0ebe4 !important;
+  margin: 0;
   padding-top: 16px;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 2px solid rgba(192, 57, 43, 0.08);
+  text-align: center;
 }
 
-/* RESPONSIVE */
+.shock-final-line .shock-final-danger {
+  font-size: 24px !important;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .transformation-box {
+  .shock-transformation {
     grid-template-columns: 1fr;
     gap: 12px;
   }
-  .arrow-transformation {
+  .shock-arrow {
     transform: rotate(90deg);
     padding: 4px 0;
-    animation: arrow-bounce-vertical 2s ease-in-out infinite;
+    animation: shock-arrow-vertical 2s ease-in-out infinite;
   }
-  @keyframes arrow-bounce-vertical {
-    0%, 100% { transform: rotate(90deg) translateX(0); }
-    50% { transform: rotate(90deg) translateX(6px); }
+  @keyframes shock-arrow-vertical {
+    0%, 100% { transform: rotate(90deg) translateY(0); opacity: 0.7; }
+    50% { transform: rotate(90deg) translateY(6px); opacity: 1; }
   }
-  .turning-header {
+  .shock-header {
     padding: 16px 20px;
-    flex-wrap: wrap;
   }
-  .turning-header h2 {
+  .shock-title {
+    font-size: 18px;
+  }
+  .shock-body {
+    padding: 18px 16px 8px;
+  }
+  .shock-lead {
+    font-size: 18px;
+    padding: 12px 16px;
+  }
+  .shock-highlight-text {
     font-size: 20px;
   }
-  .turning-header h2::after {
-    font-size: 12px;
+  .shock-reveal {
+    padding: 16px 18px;
   }
-  .turning-content {
-    padding: 20px 16px 8px;
+  .shock-reveal p {
+    font-size: 15px;
   }
-  .turning-lead {
-    font-size: 18px;
-    padding-left: 14px;
-  }
-  .conclusion-highlight {
-    padding: 20px 20px;
-  }
-  .conclusion-highlight p {
-    font-size: 16px;
-  }
-  .final-line {
-    font-size: 17px !important;
-  }
-  .before-box,
-  .after-box {
-    padding: 16px;
-    min-height: 80px;
-  }
-  .before-box p,
-  .after-box p {
-    font-size: 14px;
-  }
-  .turning-revelation {
+  .shock-final {
     padding: 18px 18px;
   }
-  .revelation-text {
+  .shock-final-text {
     font-size: 16px;
+  }
+  .shock-final-danger {
+    font-size: 16px !important;
+  }
+  .shock-final-line {
+    font-size: 17px !important;
+  }
+  .shock-final-line .shock-final-danger {
+    font-size: 19px !important;
+  }
+  .shock-before,
+  .shock-after {
+    min-height: 100px;
+    padding: 16px;
   }
 }
 
 @media (max-width: 480px) {
-  .turning-header h2 {
-    font-size: 17px;
+  .shock-title {
+    font-size: 15px;
+    letter-spacing: 1px;
   }
-  .turning-header h2::after {
+  .shock-title::before,
+  .shock-title::after {
+    display: none;
+  }
+  .shock-sub {
     font-size: 10px;
+    letter-spacing: 2px;
   }
-  .turning-lead {
+  .shock-lead {
     font-size: 16px;
   }
-  .conclusion-highlight p {
+  .shock-final-text {
     font-size: 14px;
   }
-  .final-line {
+  .shock-final-line {
     font-size: 15px !important;
   }
 }
@@ -735,59 +755,82 @@
 
   <p>Khi tôi nghe cậu kể đến đây tôi đã rụng rời tay chân, và tôi nghĩ tôi phải lập tức báo với tổng đài 111, báo với cơ quan chính quyền, vì lúc này không còn là chuyện tham vấn cho cậu bé nữa mà nó đã liên quan đến hành vi dâm ô, lạm dụng trẻ em rồi.</p>
 
-  <!-- ===== PHẦN CHUYỂN BIẾN ĐAU LÒNG ===== -->
-<div class="turning-point">
+  <!-- ===== PHẦN CHUYỂN BIẾN ĐAU LỒNG - VERSION SHOCK ===== -->
+<div class="shock-box">
   
-  <div class="turning-header">
-    <span class="turning-icon">💔</span>
-    <h2>Sự thật đau lòng đã đến</h2>
+  <!-- HEADER - ĐEN + ĐỎ -->
+  <div class="shock-header">
+    <span class="shock-icon">💔</span>
+    <span class="shock-title">SỰ THẬT KHÔNG THỂ TIN NỔI</span>
+    <span class="shock-sub">— TỪ NẠN NHÂN ĐẾN THỦ PHẠM —</span>
   </div>
 
-  <div class="turning-content">
-    <p class="turning-lead">
-      Thế nên, điều đau lòng đáng sợ nhất mà tôi lo lắng ngay từ lần đầu tiên nghe cậu bé kể <strong>đã xảy ra</strong>.
+  <!-- NỘI DUNG CHÍNH -->
+  <div class="shock-body">
+    
+    <!-- Lời dẫn nổi bật -->
+    <p class="shock-lead">
+      ⚡ Điều tôi <span class="shock-underline">lo sợ nhất</span> ngay từ lần đầu tiên nghe cậu bé kể 
+      <span class="shock-highlight-text">đã xảy ra</span>.
     </p>
 
-    <div class="turning-revelation">
-      <p class="revelation-text">
-        Ngay trong lần kể chuyện đầu tiên, cậu bé đã miêu tả rằng <strong>mẹ cậu cũng có phản ứng sinh lý</strong> với những lần sờ soạng của cậu.
+    <!-- TIẾT LỘ - Nền đỏ nhạt + chữ đen -->
+    <div class="shock-reveal">
+      <p>
+        Ngay trong lần kể chuyện đầu tiên, cậu bé đã miêu tả rằng 
+        <strong>mẹ cậu <span style="color:#c0392b;">cũng có phản ứng sinh lý</span></strong> 
+        với những lần sờ soạng của cậu.
       </p>
-      <p class="revelation-note">
-        Nhưng tôi <em>không dám đào sâu</em> vào phần đó. Vì tôi không muốn góp phần vào nhận định rằng mẹ cậu đã hùa theo hành động của cậu, để cậu kéo dài sai trái suốt 2 năm trời. Mục tiêu của tôi lúc đó chỉ là <strong>kéo cậu bé ra khỏi vũng lầy tăm tối ấy</strong>.
+      <p class="shock-reveal-note">
+        <span style="font-size:20px;">😰</span> Nhưng tôi <em>không dám đào sâu</em> vào phần đó. 
+        Vì tôi không muốn góp phần vào nhận định rằng mẹ cậu đã hùa theo hành động sai trái của cậu, 
+        để cậu kéo dài sai trái suốt <strong style="color:#c0392b;">2 năm trời</strong>. 
+        Mục tiêu của tôi lúc đó chỉ là <strong>kéo cậu bé ra khỏi vũng lầy tăm tối ấy</strong>.
       </p>
     </div>
 
-    <div class="transformation-box">
-      <div class="before-box">
-        <span class="badge victim">😔 Nạn nhân thụ động</span>
-        <p>Im lặng khi bị sờ soạng<br>
-        <span style="font-size:14px; color:#7a6f66;">— Có lẽ được thỏa mãn sau bao năm không có chồng</span></p>
-      </div>
+    <!-- SỰ CHUYỂN BIẾN - 2 Ô TƯƠNG PHẢN RÕ RỆT -->
+    <div class="shock-transformation">
       
-      <div class="arrow-transformation">⬇️</div>
-      
-      <div class="after-box">
-        <span class="badge perpetrator">🔥 Thủ phạm chủ động</span>
-        <p>Chủ động dâm ô ngược lại con mình<br>
-        <span style="font-size:14px; color:#d4cdc4;">— Khi cậu muốn dừng lại, bà đã kéo cậu trở lại</span></p>
+      <div class="shock-before">
+        <div class="shock-badge before-badge">😔 NẠN NHÂN<br><span>THỤ ĐỘNG</span></div>
+        <div class="shock-desc">
+          Im lặng khi bị sờ soạng
+          <span class="shock-desc-note">— Có lẽ được thỏa mãn sau bao năm không có chồng</span>
+        </div>
       </div>
+
+      <div class="shock-arrow">⬇️</div>
+
+      <div class="shock-after">
+        <div class="shock-badge after-badge">🔥 THỦ PHẠM<br><span>CHỦ ĐỘNG</span></div>
+        <div class="shock-desc" style="color:#f0ebe4;">
+          Chủ động dâm ô ngược lại con mình
+          <span class="shock-desc-note" style="color:#b0a090;">— Khi cậu muốn dừng lại, bà đã kéo cậu trở lại</span>
+        </div>
+      </div>
+
     </div>
 
-    <div class="turning-conclusion">
-      <div class="conclusion-highlight">
-        <p>
-          <strong>Khi cậu đã muốn dừng lại</strong>, đã xin ngủ riêng để tách ra khỏi sai trái luân thường đạo lý, thì người mẹ không chỉ không tạo điều kiện cho con ra phòng riêng, mà còn <strong class="text-red">chủ động dâm ô ngược lại con mình</strong>, kéo cậu trở lại vòng xoáy.
-        </p>
-        <p class="final-line">
-          Thay vì bảo vệ con, bà lại trở thành người tiếp tục duy trì điều <span class="text-red">kinh tởm</span> đó.
-        </p>
-      </div>
+    <!-- KẾT LUẬN - NỀN ĐEN TUYỆT ĐỐI, CHỮ TRẮNG + ĐỎ -->
+    <div class="shock-final">
+      <p class="shock-final-text">
+        <span class="shock-warning-mark">⚠️</span>
+        <strong>Khi cậu đã muốn dừng lại</strong>, đã xin ngủ riêng để tách ra khỏi sai trái luân thường đạo lý, 
+        thì người mẹ <span class="shock-final-highlight">không chỉ không tạo điều kiện</span> cho con ra phòng riêng, 
+        mà còn <span class="shock-final-danger">CHỦ ĐỘNG DÂM Ô NGƯỢC LẠI CON MÌNH</span>, 
+        kéo cậu trở lại vòng xoáy.
+      </p>
+      <p class="shock-final-line">
+        💔 Thay vì bảo vệ con, bà lại trở thành người tiếp tục duy trì điều 
+        <span class="shock-final-danger">KINH TỞM</span> đó.
+      </p>
     </div>
+
   </div>
 </div>
-<!-- ===== KẾT THÚC PHẦN CHUYỂN BIẾN ===== -->
+<!-- ===== KẾT THÚC ===== -->
 
- <<!-- PHẦN ẢNH 1 -->
 <div class="image-placeholder" style="padding:20px;">
   <p style="font-weight:600; color:#2c2c2c; margin-bottom:12px; text-align:center;">📱 Toàn bộ tin nhắn</p>
   <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; max-width:600px; margin:0 auto;">

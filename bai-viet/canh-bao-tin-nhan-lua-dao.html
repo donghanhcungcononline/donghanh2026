@@ -9,7 +9,7 @@
 <meta property="og:description" content="Những câu chuyện 'cứu con' được dàn dựng tinh vi để thao túng bạn.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://donghanhcungcon.online/bai-viet/canh-bao-tin-nhan-lua-dao.html">
-<meta property="og:image" content="https://donghanhcungcon.online/images/thumbnail-canh-bao-moi.jpg">
+<meta property="og:image" content="https://donghanhcungcon.online/images/thumbnail-canh-bao-tin-nhan.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -431,16 +431,22 @@
   /* ===== RESPONSIVE ===== */
   @media (max-width: 860px) {
     .alert-container {
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
       padding: 20px 16px;
+      gap: 24px;
     }
 
     .alert-main {
       padding: 20px 18px;
+      order: 1; /* Nội dung chính lên trước */
     }
 
     .alert-sidebar {
-      order: -1;
+      order: 2; /* Sidebar xuống dưới */
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
     }
 
     .hero-warning {
@@ -456,7 +462,12 @@
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 640px) {
+    .alert-sidebar {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
     .alert-main .lead {
       font-size: 16px;
       padding-left: 12px;
@@ -575,35 +586,146 @@
       <h4 style="color:#f39c12;"><span class="badge-phase" style="background:#e74c3c;">03</span> Kéo bạn vào</h4>
       <p style="color:#d4cdc4;">Khi bạn đã bị cuốn, họ đưa ra những gợi ý thỏa hiệp — bạn bị kéo sang làm người đồng tình, hoặc tệ hơn, là người tham gia.</p>
     </div>
-<!-- ===== ĐOẠN BẰNG CHỨNG THỰC TẾ ===== -->
-<h2><span class="emoji">🔍</span> Điều khiến tôi chắc chắn đây không phải một nạn nhân thông thường</h2>
+<!-- ===== MỤC ĐÍCH CÓ THỂ CỦA NHỮNG KỊCH BẢN NÀY ===== -->
+<h2><span class="emoji">🎯</span> Mục đích có thể của những kịch bản này</h2>
 
-<div class="phase-new-v2" style="border-left-color: #e74c3c; background: #0f0a0a; padding: 20px 24px;">
-  <p style="color: #d4cdc4; font-size: 16px; line-height: 1.9; margin-bottom: 12px;">
-    Sau những tin nhắn có nội dung đáng ngờ và việc đối phương liên tục tránh né xác minh danh tính (không nghe điện thoại, không cung cấp số điện thoại), tôi đã quyết định <strong style="color: #f39c12;">im lặng</strong> – không phải vì tôi bỏ mặc, mà vì tôi muốn xem thực sự họ có cần giúp đỡ thật sự hay không.
-  </p>
+<p style="font-size:16px; line-height:1.9; color:#2c2c2c; margin-bottom:16px;">
+  Những kịch bản được dàn dựng công phu như vậy không chỉ đơn thuần là một câu chuyện thương tâm. Phía sau chúng có thể là nhiều mục đích đen tối khác nhau. Dưới đây là những khả năng mà tôi đã tổng hợp được — hãy đọc để nhận diện và phòng tránh:
+</p>
 
-  <p style="color: #d4cdc4; font-size: 16px; line-height: 1.9; margin-bottom: 12px;">
-    Và điều tôi thấy tiếp theo đã củng cố hoàn toàn sự nghi ngờ: <strong style="color: #f0ebe4;">dù tôi không hồi đáp bất kỳ tin nhắn nào, họ vẫn tiếp tục nhắn.</strong> Không phải để hỏi <em style="color: #b0a090;">"chị còn đó không?"</em>, cũng không phải để nói <em style="color: #b0a090;">"em đã liên hệ với công an rồi"</em> – mà là những tin nhắn mang tính thông báo, khoe rằng <em style="color: #b0a090;">"em đã làm được chuyện gì đó"</em>, hoặc những dòng gợi ý về các hành vi nhạy cảm, như thể đang chờ tôi phải hỏi hoặc phải phản ứng.
-  </p>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:1.5em 0;">
 
-  <div style="margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(243, 156, 18, 0.06);">
-    <p style="color: #f0ebe4; font-size: 17px; line-height: 1.8; font-weight: 600; font-family: 'Fraunces', serif; margin: 0;">
-      ⚡ Điều đó cho tôi thấy: mục đích của họ không phải là để tìm kiếm sự giúp đỡ thực sự, mà là để duy trì cuộc trò chuyện và từng bước kéo người nghe vào một vòng xoáy nguy hiểm.
+  <!-- Card 1: Sextortion -->
+  <div style="background:#0f0a0a; padding:18px 20px; border-left:4px solid #e74c3c; border-top:1px solid rgba(231,76,60,0.05); border-right:1px solid rgba(231,76,60,0.05); border-bottom:1px solid rgba(231,76,60,0.05);">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+      <span style="font-size:18px;">🔴</span>
+      <h4 style="margin:0; font-size:15px; font-weight:700; color:#e74c3c; font-family:'Fraunces',serif;">Lừa đảo tình dục qua mạng (Sextortion)</h4>
+    </div>
+    <p style="margin:0; font-size:13.5px; line-height:1.7; color:#d4cdc4;">
+      Kịch bản được dàn dựng để từng bước đưa nạn nhân vào những cuộc trò chuyện có nội dung tình dục, sau đó ghi âm, chụp màn hình, hoặc quay video những lời nói nhạy cảm của nạn nhân. Dùng chính những hình ảnh/đoạn ghi âm đó để đe dọa, tống tiền.
     </p>
-    <p style="color: #d4cdc4; font-size: 15.5px; line-height: 1.8; margin: 6px 0 0;">
-      Và một khi bạn đã im lặng, họ sẽ không tìm cách liên hệ với cơ quan chức năng, mà chỉ tìm một người khác để tiếp tục kể câu chuyện đó.
-    </p>
+    <div style="margin-top:8px; padding:6px 10px; background:rgba(231,76,60,0.04); border-radius:2px;">
+      <span style="font-size:12px; color:#b0a090; font-weight:600;">Dấu hiệu:</span>
+      <span style="font-size:12px; color:#a0988a;">Cố tình kéo dài cuộc trò chuyện về tình dục; sau khi có nội dung nhạy cảm, đột ngột chuyển sang đe dọa.</span>
+    </div>
   </div>
+
+  <!-- Card 2: Đánh cắp danh tính -->
+  <div style="background:#0f0a0a; padding:18px 20px; border-left:4px solid #f39c12; border-top:1px solid rgba(243,156,18,0.05); border-right:1px solid rgba(243,156,18,0.05); border-bottom:1px solid rgba(243,156,18,0.05);">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+      <span style="font-size:18px;">🟡</span>
+      <h4 style="margin:0; font-size:15px; font-weight:700; color:#f39c12; font-family:'Fraunces',serif;">Đánh cắp danh tính</h4>
+    </div>
+    <p style="margin:0; font-size:13.5px; line-height:1.7; color:#d4cdc4;">
+      Bằng cách xây dựng lòng tin, họ khuyến khích nạn nhân chia sẻ thông tin cá nhân: nơi ở, công việc, tên tuổi, ảnh gia đình, lịch trình... Những thông tin này được dùng để mạo danh, trả lời câu hỏi bảo mật ngân hàng, đánh cắp tài khoản mạng xã hội.
+    </p>
+    <div style="margin-top:8px; padding:6px 10px; background:rgba(243,156,18,0.04); border-radius:2px;">
+      <span style="font-size:12px; color:#b0a090; font-weight:600;">Dấu hiệu:</span>
+      <span style="font-size:12px; color:#a0988a;">Hỏi về cuộc sống, bạn bè, công việc, gia đình một cách tự nhiên; tạo cảm giác thân thiết để bạn dễ dàng chia sẻ.</span>
+    </div>
+  </div>
+
+  <!-- Card 3: Lôi kéo vào mạng lưới tội phạm -->
+  <div style="background:#0f0a0a; padding:18px 20px; border-left:4px solid #8e44ad; border-top:1px solid rgba(142,68,173,0.05); border-right:1px solid rgba(142,68,173,0.05); border-bottom:1px solid rgba(142,68,173,0.05);">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+      <span style="font-size:18px;">🟣</span>
+      <h4 style="margin:0; font-size:15px; font-weight:700; color:#a569bd; font-family:'Fraunces',serif;">Lôi kéo vào mạng lưới tội phạm tình dục</h4>
+    </div>
+    <p style="margin:0; font-size:13.5px; line-height:1.7; color:#d4cdc4;">
+      Họ có thể đang tìm người tham gia hoặc tiếp tay cho các hành vi bất hợp pháp: tham gia vào các nhóm kín có nội dung ấu dâm hoặc bạo hành; trở thành "mắt xích" trong một mạng lưới lạm dụng và khai thác tình dục.
+    </p>
+    <div style="margin-top:8px; padding:6px 10px; background:rgba(142,68,173,0.04); border-radius:2px;">
+      <span style="font-size:12px; color:#b0a090; font-weight:600;">Dấu hiệu:</span>
+      <span style="font-size:12px; color:#a0988a;">Chuyển từ nội dung đau thương sang đề nghị bạn "tham gia" hoặc "đồng hành"; gợi ý "chấp nhận thỏa hiệp".</span>
+    </div>
+  </div>
+
+  <!-- Card 4: Mồi chài dịch vụ phi pháp -->
+  <div style="background:#0f0a0a; padding:18px 20px; border-left:4px solid #2980b9; border-top:1px solid rgba(41,128,185,0.05); border-right:1px solid rgba(41,128,185,0.05); border-bottom:1px solid rgba(41,128,185,0.05);">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+      <span style="font-size:18px;">🔵</span>
+      <h4 style="margin:0; font-size:15px; font-weight:700; color:#5dade2; font-family:'Fraunces',serif;">Mồi chài dịch vụ phi pháp</h4>
+    </div>
+    <p style="margin:0; font-size:13.5px; line-height:1.7; color:#d4cdc4;">
+      Một số kịch bản nhằm giới thiệu các "dịch vụ" bất hợp pháp như: đường dây mua bán người qua biên giới; môi giới cho các hành vi lạm dụng trẻ em; dụ dỗ tham gia vào các tổ chức tội phạm.
+    </p>
+    <div style="margin-top:8px; padding:6px 10px; background:rgba(41,128,185,0.04); border-radius:2px;">
+      <span style="font-size:12px; color:#b0a090; font-weight:600;">Dấu hiệu:</span>
+      <span style="font-size:12px; color:#a0988a;">Kéo dài cuộc trò chuyện để "dạy dỗ" và "hướng dẫn"; nhấn mạnh "có những người khác cũng làm vậy".</span>
+    </div>
+  </div>
+
 </div>
-<!-- ===== KẾT THÚC ĐOẠN THÊM ===== -->
+
+<!-- 2 mục còn lại (Lừa đảo cảm xúc + Quấy rối) - full width -->
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:0 0 1.5em 0;">
+
+  <!-- Card 5: Lừa đảo cảm xúc -->
+  <div style="background:#0f0a0a; padding:18px 20px; border-left:4px solid #e67e22; border-top:1px solid rgba(230,126,34,0.05); border-right:1px solid rgba(230,126,34,0.05); border-bottom:1px solid rgba(230,126,34,0.05);">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+      <span style="font-size:18px;">🟠</span>
+      <h4 style="margin:0; font-size:15px; font-weight:700; color:#e67e22; font-family:'Fraunces',serif;">Lừa đảo cảm xúc để chiếm đoạt tài sản</h4>
+    </div>
+    <p style="margin:0; font-size:13.5px; line-height:1.7; color:#d4cdc4;">
+      Xây dựng câu chuyện xuyên suốt về nỗi đau, từ đó xin tiền "để cứu con", "để làm thủ tục", "để trả tiền thuê nhà"... Khi đã đủ lòng tin, họ đưa ra các lý do để nạn nhân chuyển tiền.
+    </p>
+    <div style="margin-top:8px; padding:6px 10px; background:rgba(230,126,34,0.04); border-radius:2px;">
+      <span style="font-size:12px; color:#b0a090; font-weight:600;">Dấu hiệu:</span>
+      <span style="font-size:12px; color:#a0988a;">Than thở về hoàn cảnh khó khăn; đưa ra yêu cầu tài chính; nếu không đồng ý, họ tỏ ra thất vọng.</span>
+    </div>
+  </div>
+
+  <!-- Card 6: Quấy rối và phá hoại tâm lý -->
+  <div style="background:#0f0a0a; padding:18px 20px; border-left:4px solid #95a5a6; border-top:1px solid rgba(149,165,166,0.05); border-right:1px solid rgba(149,165,166,0.05); border-bottom:1px solid rgba(149,165,166,0.05);">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+      <span style="font-size:18px;">⚪</span>
+      <h4 style="margin:0; font-size:15px; font-weight:700; color:#95a5a6; font-family:'Fraunces',serif;">Quấy rối và phá hoại tâm lý</h4>
+    </div>
+    <p style="margin:0; font-size:13.5px; line-height:1.7; color:#d4cdc4;">
+      Một số kẻ chỉ đơn giản là muốn gieo rắc sự hoang mang, đau khổ tinh thần; kéo dài cảm giác bất an và kiểm soát tâm lý; tạo ra sự phụ thuộc để thỏa mãn nhu cầu thao túng.
+    </p>
+    <div style="margin-top:8px; padding:6px 10px; background:rgba(149,165,166,0.04); border-radius:2px;">
+      <span style="font-size:12px; color:#b0a090; font-weight:600;">Dấu hiệu:</span>
+      <span style="font-size:12px; color:#a0988a;">Không đưa ra yêu cầu cụ thể; chỉ kéo dài cuộc trò chuyện để gây mệt mỏi; không quan tâm đến giải pháp.</span>
+    </div>
+  </div>
+
+</div>
+
+<p style="font-size:15.5px; line-height:1.9; color:#2c2c2c; margin:8px 0 0; padding:14px 20px; background:#f5f0eb; border-radius:2px; border-left:4px solid #f39c12;">
+  <strong style="color:#1a1410;">Dù là mục đích gì, tất cả đều đáng báo động và cần được ngăn chặn ngay từ khi có dấu hiệu đầu tiên.</strong> Hãy luôn tỉnh táo và đặt câu hỏi về những câu chuyện quá mức thương tâm, quá chi tiết và quá mượt mà từ những tài khoản lạ.
+</p>
+<!-- ===== KẾT THÚC MỤC ĐÍCH ===== -->
+    <!-- ===== ĐOẠN BẰNG CHỨNG THỰC TẾ ===== -->
+    <h2><span class="emoji">🔍</span> Điều khiến tôi chắc chắn đây không phải một nạn nhân thông thường</h2>
+
+    <div class="phase-new-v2" style="border-left-color: #e74c3c; background: #0f0a0a; padding: 20px 24px;">
+      <p style="color: #d4cdc4; font-size: 16px; line-height: 1.9; margin-bottom: 12px;">
+        Sau những tin nhắn có nội dung đáng ngờ và việc đối phương liên tục tránh né xác minh danh tính (không nghe điện thoại, không cung cấp số điện thoại), tôi đã quyết định <strong style="color: #f39c12;">im lặng</strong> – không phải vì tôi bỏ mặc, mà vì tôi muốn xem thực sự họ có cần giúp đỡ thật sự hay không.
+      </p>
+
+      <p style="color: #d4cdc4; font-size: 16px; line-height: 1.9; margin-bottom: 12px;">
+        Và điều tôi thấy tiếp theo đã củng cố hoàn toàn sự nghi ngờ: <strong style="color: #f0ebe4;">dù tôi không hồi đáp bất kỳ tin nhắn nào, họ vẫn tiếp tục nhắn.</strong> Không phải để hỏi <em style="color: #b0a090;">"chị còn đó không?"</em>, cũng không phải để nói <em style="color: #b0a090;">"em đã liên hệ với công an rồi"</em> – mà là những tin nhắn mang tính thông báo, khoe rằng <em style="color: #b0a090;">"em đã làm được chuyện gì đó"</em>, hoặc những dòng gợi ý về các hành vi nhạy cảm, như thể đang chờ tôi phải hỏi hoặc phải phản ứng.
+      </p>
+
+      <div style="margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(243, 156, 18, 0.06);">
+        <p style="color: #f0ebe4; font-size: 17px; line-height: 1.8; font-weight: 600; font-family: 'Fraunces', serif; margin: 0;">
+          ⚡ Điều đó cho tôi thấy: mục đích của họ không phải là để tìm kiếm sự giúp đỡ thực sự, mà là để duy trì cuộc trò chuyện và từng bước kéo người nghe vào một vòng xoáy nguy hiểm.
+        </p>
+        <p style="color: #d4cdc4; font-size: 15.5px; line-height: 1.8; margin: 6px 0 0;">
+          Và một khi bạn đã im lặng, họ sẽ không tìm cách liên hệ với cơ quan chức năng, mà chỉ tìm một người khác để tiếp tục kể câu chuyện đó.
+        </p>
+      </div>
+    </div>
+    <!-- ===== KẾT THÚC ĐOẠN THÊM ===== -->
+
     <!-- === CHECKLIST === -->
     <h2><span class="emoji">🔍</span> Điểm chung của tài khoản ảo</h2>
 
     <div class="checklist-new-v2">
       <div class="item">
         <span class="icon">◆</span>
-        <span class="text"><strong>Facebook mới lập (hoặc ngay cả như đã lập từ rất lâu) nhưng </strong>, ít bạn bè, ít tương tác</span>
+        <span class="text"><strong>Facebook mới lập (hoặc ngay cả đã lập từ rất lâu) nhưng</strong>, ít bạn bè, ít tương tác</span>
       </div>
       <div class="item">
         <span class="icon">◆</span>
@@ -611,7 +733,7 @@
       </div>
       <div class="item">
         <span class="icon">◆</span>
-        <span class="text"><strong>Nói về "người xấu" mà với thái độ như là ngưỡng mộ chứ không phải chửi bới, căm ghét</strong>, mô tả chi tiết hành vi xấu như một điều đương nhiên chứ không phải là biến thái, bất thường</span>
+        <span class="text"><strong>Nói về "người xấu" với thái độ như ngưỡng mộ</strong>, mô tả chi tiết hành vi xấu như một điều đương nhiên chứ không phải biến thái, bất thường</span>
       </div>
       <div class="item">
         <span class="icon">◆</span>
@@ -629,7 +751,7 @@
     <div class="checklist-new-v2" style="border-left-color:#e74c3c;">
       <div class="item">
         <span class="icon">▶</span>
-        <span class="text"><strong>Họ có bao giờ hỏi cách liên hệ với cơ quan chức năng chưa? hay cứ nhắc tới là họ lảng tránh</strong></span>
+        <span class="text"><strong>Họ có bao giờ hỏi cách liên hệ với cơ quan chức năng chưa?</strong> hay cứ nhắc tới là họ lảng tránh</span>
       </div>
       <div class="item">
         <span class="icon">▶</span>
@@ -637,7 +759,7 @@
       </div>
       <div class="item">
         <span class="icon">▶</span>
-        <span class="text"><strong>Nếu tôi lặng im và không phản hồi, họ có tìm đến cơ quan chức năng hay các chuyên gia để được hỗ trợ,</strong> hay họ sẽ tiếp tục tìm một người khác để chia sẻ câu chuyện đó nhằm mục đích đặc biệt nào đó?</span>
+        <span class="text"><strong>Nếu tôi lặng im và không phản hồi, họ có tìm đến cơ quan chức năng hay các chuyên gia để được hỗ trợ</strong>, hay họ sẽ tiếp tục tìm một người khác để chia sẻ câu chuyện đó nhằm mục đích đặc biệt nào đó?</span>
       </div>
     </div>
 
@@ -657,11 +779,17 @@
 
     <!-- === ẢNH === -->
     <h2><span class="emoji">📱</span> Những tin nhắn bất thường</h2>
-    <p style="font-size:15px; color:#5a4a3a;">Ảnh tin nhắn đối tượng dùng để lừa đảo:</p>
+    <p style="font-size:15px; color:#5a4a3a;">Ảnh tin nhắn đối tượng dùng để từng bước đưa thông tin dụ hoặc sự tò mò</p>
 
     <div style="background:#e8e3dd; padding:24px 20px; margin:1.2em 0; border:2px dashed #c9c0b8; text-align:center; color:#7a6f66;">
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; max-width:500px; margin:0 auto;">
-        <!-- CHỊ CHÈN ẢNH VÀO ĐÂY -->
+      <img src="/images/111.jpg" alt="Tin nhắn bất thường 1" style="width:100%; border-radius:4px; display:block;">
+  <img src="/images/222.jpg" alt="Tin nhắn bất thường 1" style="width:100%; border-radius:4px; display:block;">
+  <img src="/images/333.jpg" alt="Tin nhắn bất thường 1" style="width:100%; border-radius:4px; display:block;">
+          <img src="/images/444.jpg" alt="Tin nhắn bất thường 1" style="width:100%; border-radius:4px; display:block;">
+  <img src="/images/555.jpg" alt="Tin nhắn bất thường 1" style="width:100%; border-radius:4px; display:block;">
+  <img src="/images/666.jpg" alt="Tin nhắn bất thường 1" style="width:100%; border-radius:4px; display:block;">
+          <img src="/images/777.jpg" alt="Tin nhắn bất thường 1" style="width:100%; border-radius:4px; display:block;">
         <p style="grid-column:1/-1; font-size:13px; font-style:italic; padding:8px 0;">(Ảnh chụp tin nhắn — đã che thông tin nhận dạng)</p>
       </div>
     </div>

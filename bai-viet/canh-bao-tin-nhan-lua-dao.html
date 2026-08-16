@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CẢNH BÁO: Lôi kéo qua tin nhắn — Đồng Hành Cùng Con</title>
+<meta name="description" content="Cảnh báo về chiêu trò lôi kéo, thao túng tâm lý qua tin nhắn — hãy đọc và chia sẻ để bảo vệ người khác.">
+<meta property="og:title" content="⚠️ CẢNH BÁO: Lôi kéo qua tin nhắn">
+<meta property="og:description" content="Những câu chuyện 'cứu con' được dàn dựng tinh vi để thao túng bạn.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://donghanhcungcon.online/bai-viet/canh-bao-tin-nhan-lua-dao.html">
+<meta property="og:image" content="https://donghanhcungcon.online/images/thumbnail-canh-bao-moi.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     CẢNH BÁO — PHONG CÁCH HOÀN TOÀN MỚI
+     Màu nhấn: Vàng cam (#f39c12) + Đỏ cam (#e74c3c)
+     Nền: Gradient tối
+     ============================================================ */
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #f5f0eb;
+    color: #1a1410;
+    line-height: 1.7;
+  }
+
+  /* ----- HEADER (copy từ site chính) ----- */
+  .site-header {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    background: #0f0a0a;
+  }
+
+  .site-header .wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    color: #f0ebe4;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'Fraunces', serif;
+  }
+
+  .brand .mark {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #f39c12;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  .main-nav a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+
+  .main-nav a:hover { color: #f39c12; }
+
+  /* ===== HERO MỚI - PHONG CÁCH WARNING ===== */
+  .hero-warning {
+    background: linear-gradient(145deg, #0a0606 0%, #1a0f0a 50%, #0a0606 100%);
+    padding: 60px 0 40px;
+    border-bottom: 4px solid #f39c12;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-warning::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(243, 156, 18, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-warning .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 28px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-warning .badge {
+    display: inline-block;
+    background: #f39c12;
+    color: #0a0606;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 4px 16px;
+    margin-bottom: 16px;
+  }
+
+  .hero-warning h1 {
+    color: #f0ebe4;
+    font-size: clamp(30px, 4.5vw, 48px);
+    font-weight: 800;
+    font-family: 'Fraunces', serif;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-warning h1 .highlight {
+    color: #f39c12;
+    border-bottom: 3px solid #f39c12;
+    padding-bottom: 2px;
+  }
+
+  .hero-warning .sub {
+    color: rgba(255,255,255,0.5);
+    font-size: 17px;
+    margin-top: 10px;
+    border-left: 3px solid #f39c12;
+    padding-left: 18px;
+  }
+
+  .hero-warning .meta {
+    color: rgba(255,255,255,0.25);
+    font-size: 13px;
+    margin-top: 12px;
+  }
+
+  .hero-warning .meta strong {
+    color: #f39c12;
+  }
+
+  /* ===== BODY - 2 CỘT ===== */
+  .alert-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 28px;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 40px;
+  }
+
+  .alert-main {
+    background: #fcfaf7;
+    padding: 32px 36px;
+    border-radius: 4px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.02);
+  }
+
+  .alert-sidebar {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* ----- SIDEBAR CARDS ----- */
+  .sidebar-card {
+    background: #0f0a0a;
+    padding: 20px 22px;
+    border-left: 4px solid #f39c12;
+  }
+
+  .sidebar-card h4 {
+    color: #f39c12;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .sidebar-card p, .sidebar-card li {
+    color: #d4cdc4;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .sidebar-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 6px 0 0;
+  }
+
+  .sidebar-card ul li {
+    padding: 4px 0 4px 20px;
+    position: relative;
+    font-size: 13.5px;
+  }
+
+  .sidebar-card ul li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    color: #f39c12;
+    font-size: 10px;
+  }
+
+  /* ----- MAIN CONTENT ----- */
+  .alert-main .lead {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #1a1410;
+    font-weight: 600;
+    font-family: 'Fraunces', serif;
+    border-left: 4px solid #f39c12;
+    padding-left: 20px;
+    margin-bottom: 28px;
+  }
+
+  .alert-main h2 {
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+    color: #1a1410;
+    margin: 2em 0 0.8em;
+  }
+
+  .alert-main h2 .emoji {
+    margin-right: 8px;
+  }
+
+  .alert-main p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #2c2c2c;
+    margin-bottom: 16px;
+  }
+
+  .alert-main strong { color: #1a1410; font-weight: 700; }
+
+  .alert-main .highlight-text {
+    color: #e74c3c;
+    font-weight: 700;
+  }
+
+  /* ----- BOX CẢNH BÁO KIỂU MỚI ----- */
+  .warning-box-new {
+    background: linear-gradient(145deg, #0f0a0a, #0a0606);
+    padding: 24px 28px;
+    margin: 1.8em 0;
+    border-left: 5px solid #f39c12;
+    border-top: 1px solid rgba(243, 156, 18, 0.05);
+    border-right: 1px solid rgba(243, 156, 18, 0.05);
+    border-bottom: 1px solid rgba(243, 156, 18, 0.05);
+  }
+
+  .warning-box-new p {
+    color: #d4cdc4;
+    font-size: 15.5px;
+    line-height: 1.8;
+    margin: 0 0 10px;
+  }
+
+  .warning-box-new p:last-child { margin-bottom: 0; }
+
+  .warning-box-new strong { color: #f39c12; }
+
+  .warning-box-new .quote-text {
+    display: block;
+    color: #f0ebe4;
+    font-style: italic;
+    padding: 10px 16px;
+    margin: 6px 0 0;
+    background: rgba(243, 156, 18, 0.03);
+    border-radius: 2px;
+    font-size: 15px;
+  }
+
+  /* ----- PHASE BOX ----- */
+  .phase-new-v2 {
+    background: #f5f0eb;
+    padding: 18px 22px;
+    margin: 1.2em 0;
+    border-left: 5px solid #f39c12;
+  }
+
+  .phase-new-v2 h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1410;
+    margin: 0 0 4px;
+    font-family: 'Fraunces', serif;
+  }
+
+  .phase-new-v2 h4 .badge-phase {
+    display: inline-block;
+    background: #f39c12;
+    color: #0a0606;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 1px 10px;
+    border-radius: 2px;
+    margin-right: 8px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .phase-new-v2 p {
+    margin: 0;
+    font-size: 15px;
+    color: #2c2c2c;
+    line-height: 1.7;
+  }
+
+  /* ----- CHECKLIST MỚI ----- */
+  .checklist-new-v2 {
+    background: #0f0a0a;
+    padding: 22px 26px;
+    margin: 1.8em 0;
+    border-left: 5px solid #f39c12;
+  }
+
+  .checklist-new-v2 .item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.02);
+  }
+
+  .checklist-new-v2 .item:last-child { border-bottom: none; }
+
+  .checklist-new-v2 .icon {
+    color: #f39c12;
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .checklist-new-v2 .text {
+    color: #d4cdc4;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .checklist-new-v2 .text strong {
+    color: #f0ebe4;
+  }
+
+  /* ----- CALL TO ACTION ----- */
+  .cta-final-new {
+    background: linear-gradient(145deg, #0a0606, #0f0a0a);
+    padding: 28px 32px;
+    margin: 2em 0;
+    text-align: center;
+    border: 2px solid #f39c12;
+  }
+
+  .cta-final-new .big-number {
+    font-size: 44px;
+    font-weight: 900;
+    color: #f39c12;
+    font-family: 'Fraunces', serif;
+    letter-spacing: 3px;
+  }
+
+  .cta-final-new .label {
+    font-size: 13px;
+    color: #8a7a6a;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .cta-final-new p {
+    color: #d4cdc4;
+    font-size: 15.5px;
+    line-height: 1.8;
+    margin: 0 0 10px;
+  }
+
+  .cta-final-new strong { color: #f0ebe4; }
+
+  /* ----- SHARE ----- */
+  .share-area {
+    background: #0f0a0a;
+    padding: 24px 28px;
+    margin: 2em 0;
+    text-align: center;
+    border-left: 5px solid #f39c12;
+    border-right: 5px solid #f39c12;
+  }
+
+  .share-area p {
+    color: #d4cdc4;
+    font-size: 16px;
+    margin: 0 0 12px;
+  }
+
+  .share-area strong { color: #f0ebe4; }
+
+  .share-btns {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .share-btn {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid rgba(255,255,255,0.06);
+    color: #f0ebe4;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  .share-btn:hover {
+    background: #f39c12;
+    border-color: #f39c12;
+    color: #0a0606;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 860px) {
+    .alert-container {
+      grid-template-columns: 1fr;
+      padding: 20px 16px;
+    }
+
+    .alert-main {
+      padding: 20px 18px;
+    }
+
+    .alert-sidebar {
+      order: -1;
+    }
+
+    .hero-warning {
+      padding: 30px 0 20px;
+    }
+
+    .hero-warning h1 {
+      font-size: 26px;
+    }
+
+    .cta-final-new .big-number {
+      font-size: 32px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .alert-main .lead {
+      font-size: 16px;
+      padding-left: 12px;
+    }
+
+    .warning-box-new {
+      padding: 16px 14px;
+    }
+
+    .checklist-new-v2 {
+      padding: 14px 14px;
+    }
+
+    .phase-new-v2 {
+      padding: 12px 14px;
+    }
+
+    .cta-final-new {
+      padding: 18px 14px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="wrap">
+    <a href="/index.html" class="brand"><span class="mark"></span>Đồng hành cùng con</a>
+    <nav class="main-nav">
+      <a href="/index.html#tinh-huong">Tình huống</a>
+      <a href="/index.html#gia-tri">Vì sao</a>
+      <a href="/about.html">Về Sophia</a>
+      <a href="https://sophianguyen.com.vn" target="_blank">Đặt lịch tư vấn</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-warning">
+  <div class="wrap">
+    <div class="badge">⚠️ CẢNH BÁO KHẨN CẤP</div>
+    <h1>Lôi kéo nguy hiểm <span class="highlight">qua tin nhắn</span></h1>
+    <div class="sub">Những câu chuyện "cứu con" được dàn dựng tinh vi — hãy cảnh giác!</div>
+    <div class="meta">Từ trải nghiệm thực tế · <strong>Đọc và chia sẻ</strong></div>
+  </div>
+</section>
+
+<!-- NỘI DUNG - 2 CỘT -->
+<div class="alert-container">
+
+  <!-- CỘT CHÍNH -->
+  <div class="alert-main">
+
+    <p class="lead">
+      Gần đây, tôi nhận được một loạt tin nhắn từ một tài khoản Facebook tự xưng là người mẹ đơn thân tại TP.HCM. Cô ta kể chuyện tuyệt vọng vì con gái bị dụ dỗ, lạm dụng và bỏ nhà đi. Nhưng càng nghe, tôi càng thấy <span class="highlight-text">một kịch bản được dàn dựng quá kỹ</span>.
+    </p>
+
+    <div class="warning-box-new">
+      <p><strong>⚡ Diễn biến như một bộ phim đã được tập dượt:</strong></p>
+      <p>Ban đầu là người mẹ đau khổ kể về việc phát hiện con thủ dâm và đã đánh con. Sau đó, cô ta kể chi tiết về cách một người phụ nữ khác tiếp cận, cô lập và đưa con vào các hành vi tình dục, bạo hành.</p>
+      <span class="quote-text">"Con bé 15 tuổi và tự nguyện" — cô ta nói công an đã từ chối can thiệp <em>(nhưng trên thực tế không một cơ quan chức năng nào từ chối giúp đỡ việc liên quan đến một bé gái 15t đang bị dụ dỗ, thao túng vào những chuyện tình dục xâm hại.)</em></span>
+    </div>
+
+    <p>
+      Cùng lúc đó, một <strong>"người bạn của con"</strong> xuất hiện, chủ động gửi ảnh vết thương và kể về việc bị "giáo huấn". <span class="highlight-text">Câu chuyện bắt đầu chuyển hướng</span> — từ "cứu con" sang những lời gợi ý, đàm phán, và cuối cùng là:
+    </p>
+
+    <div class="warning-box-new" style="border-left-color:#e74c3c;">
+      <p style="color:#f0ebe4; font-style:italic; font-size:16px;">
+        "em có thể đồng ý với điều kiện không có chuyện mẹ con td với nhau"<br>
+        "cái khó nhất của em là bước qua rào cản của bản thân"<br>
+        "em có thể chấp nhận con bé bạn nó làm với em để kết nối"
+      </p>
+      <p style="margin-top:8px; border-top:1px solid rgba(255,255,255,0.04); padding-top:10px; color:#b0a090;">
+        Kèm theo lịch trình cụ thể: <em>"17 con gái em nhập học, em họ có nhiều tg để làm chuyện khác"</em>
+      </p>
+    </div>
+
+    <!-- === PHASE BOX === -->
+    <h2><span class="emoji">🎯</span> 3 giai đoạn thao túng</h2>
+
+    <div class="phase-new-v2">
+      <h4><span class="badge-phase">01</span> Làm nạn nhân</h4>
+      <p>Họ xây dựng câu chuyện thương tâm, kể vanh vách như một bộ phim đã tập dượt, không hỗn loạn như người thực sự đau khổ.</p>
+    </div>
+
+    <div class="phase-new-v2">
+      <h4><span class="badge-phase">02</span> Làm bạn đồng hành</h4>
+      <p>Họ chia sẻ chi tiết riêng tư, tình dục và bạo hành một cách quá chi tiết. Họ tin tưởng bạn — <em>"chỉ có mình bạn"</em> — khiến bạn thấy đặc biệt và khó dừng lại.</p>
+    </div>
+
+    <div class="phase-new-v2" style="border-left-color:#e74c3c; background:#0f0a0a;">
+      <h4 style="color:#f39c12;"><span class="badge-phase" style="background:#e74c3c;">03</span> Kéo bạn vào</h4>
+      <p style="color:#d4cdc4;">Khi bạn đã bị cuốn, họ đưa ra những gợi ý thỏa hiệp — bạn bị kéo sang làm người đồng tình, hoặc tệ hơn, là người tham gia.</p>
+    </div>
+
+    <!-- === CHECKLIST === -->
+    <h2><span class="emoji">🔍</span> Điểm chung của tài khoản ảo</h2>
+
+    <div class="checklist-new-v2">
+      <div class="item">
+        <span class="icon">◆</span>
+        <span class="text"><strong>Facebook mới lập</strong>, ít bạn bè, ít tương tác</span>
+      </div>
+      <div class="item">
+        <span class="icon">◆</span>
+        <span class="text"><strong>Kể chuyện cực kỳ mượt</strong>, chi tiết, không mâu thuẫn</span>
+      </div>
+      <div class="item">
+        <span class="icon">◆</span>
+        <span class="text"><strong>Từ chối nghe máy</strong>, không cung cấp số điện thoại</span>
+      </div>
+      <div class="item">
+        <span class="icon">◆</span>
+        <span class="text"><strong>Khi bạn lùi lại</strong>, họ chuyển sang thăm dò giới hạn hoặc tạo lòng thương hại</span>
+      </div>
+    </div>
+
+    <!-- === CÂU HỎI === -->
+    <h2><span class="emoji">💭</span> Nếu gặp câu chuyện này, hãy tự hỏi</h2>
+
+    <div class="checklist-new-v2" style="border-left-color:#e74c3c;">
+      <div class="item">
+        <span class="icon">▶</span>
+        <span class="text"><strong>Họ có bao giờ hỏi cách liên hệ với cơ quan chức năng chưa? hay cứ nhắc tới là họ lảng tránh</strong></span>
+      </div>
+      <div class="item">
+        <span class="icon">▶</span>
+        <span class="text"><strong>Họ có thực sự muốn thoát ra</strong>, hay chỉ muốn bạn tiếp tục lắng nghe để tìm kiếm sự đồng cảm, sau đó là lôi kéo đồng lõa?</span>
+      </div>
+      <div class="item">
+        <span class="icon">▶</span>
+        <span class="text"><strong>Nếu tôi lặng im và không phản hồi, họ có tìm đến cơ quan chức năng hay các chuyên gia để được hỗ trợ,</strong> hay họ sẽ tiếp tục tìm một người khác để chia sẻ câu chuyện đó nhằm mục đích đặc biệt nào đó?</span>
+      </div>
+    </div>
+
+    <p style="font-size:16px; margin-top:4px;">
+      Câu trả lời sẽ giúp bạn biết mình đang đối diện với <strong>nạn nhân thật</strong> hay <strong>kịch bản được dựng sẵn</strong>.
+    </p>
+
+    <!-- === KẾT LUẬN === -->
+    <div class="warning-box-new" style="border-left-color:#f39c12; background:#0a0606;">
+      <p style="font-size:18px; color:#f0ebe4; font-weight:700; font-family:'Fraunces',serif;">
+        Không phải lúc nào bỏ mặc cũng là vô tâm.
+      </p>
+      <p style="font-size:15.5px;">
+        Có những lúc, <strong style="color:#f39c12;">bỏ mặc là hành động can đảm và tỉnh táo nhất</strong> để không tiếp tay cho vòng xoáy độc hại.
+      </p>
+    </div>
+
+    <!-- === ẢNH === -->
+    <h2><span class="emoji">📱</span> Những tin nhắn bất thường</h2>
+    <p style="font-size:15px; color:#5a4a3a;">Chị chèn ảnh chụp màn hình vào đây để minh họa:</p>
+
+    <div style="background:#e8e3dd; padding:24px 20px; margin:1.2em 0; border:2px dashed #c9c0b8; text-align:center; color:#7a6f66;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; max-width:500px; margin:0 auto;">
+        <!-- CHỊ CHÈN ẢNH VÀO ĐÂY -->
+        <p style="grid-column:1/-1; font-size:13px; font-style:italic; padding:8px 0;">(Ảnh chụp tin nhắn — đã che thông tin nhận dạng)</p>
+      </div>
+    </div>
+
+    <!-- === FINAL CTA === -->
+    <div class="cta-final-new">
+      <p style="font-size:18px; color:#f0ebe4; font-weight:700;">📢 Hãy chia sẻ để nhiều người được cảnh báo</p>
+
+      <div style="margin:12px 0;">
+        <div class="label">📞 Tổng đài Bảo vệ Trẻ em</div>
+        <div class="big-number">111</div>
+        <div style="font-size:13px; color:#8a7a6a;">Mọi lúc, mọi nơi</div>
+      </div>
+
+      <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; padding-top:14px; border-top:1px solid rgba(255,255,255,0.04);">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://donghanhcungcon.online/bai-viet/canh-bao-tin-nhan-lua-dao.html" target="_blank" class="share-btn">📘 Facebook</a>
+        <a href="https://zalo.me/share?url=https://donghanhcungcon.online/bai-viet/canh-bao-tin-nhan-lua-dao.html" target="_blank" class="share-btn">💬 Zalo</a>
+        <button onclick="navigator.clipboard.writeText('https://donghanhcungcon.online/bai-viet/canh-bao-tin-nhan-lua-dao.html')" class="share-btn">📋 Copy link</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CỘT PHỤ (SIDEBAR) -->
+  <div class="alert-sidebar">
+
+    <div class="sidebar-card">
+      <h4>⚠️ Nhận diện</h4>
+      <ul>
+        <li>Kể chuyện quá mượt</li>
+        <li>Chi tiết tình dục bất thường</li>
+        <li>Từ chối xác minh danh tính</li>
+        <li>Không hỏi về cơ quan chức năng</li>
+        <li>Chỉ muốn bạn "ở bên"</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card" style="border-left-color:#e74c3c;">
+      <h4>🔴 Dấu hiệu bẫy</h4>
+      <ul>
+        <li>Chuyển từ "cứu con" sang "gợi ý"</li>
+        <li>Đưa ra điều kiện thỏa hiệp</li>
+        <li>Kéo bạn vào câu chuyện</li>
+        <li>Không tìm giải pháp thực tế</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card" style="border-left-color:#f39c12; background:#0a0808;">
+      <h4>✅ Nên làm</h4>
+      <ul>
+        <li>Dừng lại khi nghi ngờ</li>
+        <li>Báo cáo tài khoản</li>
+        <li>Liên hệ tổng đài 111</li>
+        <li>Chia sẻ để cảnh báo</li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer style="background:#0a0606; padding:24px 0; border-top:1px solid rgba(255,255,255,0.03); margin-top:20px;">
+  <div style="max-width:1100px; margin:0 auto; padding:0 28px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; font-size:13px; color:#6a5a50;">
+    <span>© 2025 Đồng hành cùng con · Sophia Nguyễn</span>
+    <div style="display:flex; gap:20px;">
+      <a href="/about.html" style="color:#6a5a50; text-decoration:none;">Về Sophia</a>
+      <a href="https://sophianguyen.com.vn" target="_blank" style="color:#6a5a50; text-decoration:none;">sophianguyen.com.vn</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

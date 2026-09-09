@@ -46,7 +46,8 @@
     <path d="M -50 420 C 200 340, 300 470, 550 380 S 900 200, 1250 260" fill="none" stroke="#C96A52" stroke-width="2" stroke-dasharray="1 14" stroke-linecap="round"/>
     <path d="M -50 120 C 250 60, 350 180, 600 100 S 950 -20, 1250 40" fill="none" stroke="#22384A" stroke-width="1.5" stroke-dasharray="1 12" stroke-linecap="round" opacity="0.4"/>
   </svg>
-        <span class="eyebrow">Nhật ký từ những buổi tư vấn thật</span>
+  <div class="wrap">
+          <span class="eyebrow">Nhật ký từ những buổi tư vấn thật</span>
       <h1>Ba mẹ không cần <em>hoàn hảo</em>,<br>chỉ cần không đơn độc.</h1>
       <p class="lede">Mỗi tuần, một tình huống thật mà ba mẹ mang đến cho tôi — được kể lại và gỡ rối dưới góc nhìn tâm lý, để lần sau con làm chị/anh sốc, mình đã có sẵn một hướng đi.</p>
       <div class="hero-actions">
@@ -67,7 +68,7 @@
     <div class="section-head">
       <div>
         <h2>Kho tình huống</h2>
-        <p>Lọc theo độ tuổi của con — hoặc chọn mục <strong style="color:#c0392b;">🚨 Cảnh tỉnh đặc biệt</strong> để đọc những câu chuyện cảnh báo.</p>
+        <p>Lọc theo độ tuổi của con để tìm đúng câu chuyện gần với nhà mình nhất.</p>
       </div>
     </div>
 
@@ -80,53 +81,17 @@
         <button class="filter-btn" data-filter="tieu-hoc">📖 Tiểu học (6-11)</button>
         <button class="filter-btn" data-filter="day-thi">🌱 Dậy thì (11-15)</button>
         <button class="filter-btn" data-filter="thanh-thieu-nien">🎯 Thanh thiếu niên (16-18)</button>
-        <button class="filter-btn" data-filter="canh-tinh" style="border-color:#c0392b; color:#c0392b;">🚨 Cảnh tỉnh đặc biệt</button>
+        <!-- ===== TAB CẢNH TỈNH = LINK SANG TRANG RIÊNG ===== -->
+        <a href="canh-tinh-dac-biet.html" class="filter-btn" style="border-color:#c0392b; color:#c0392b; text-decoration:none; display:inline-block; padding:8px 16px; border-radius:999px; font-size:14px; font-family:var(--font-body); cursor:pointer; transition:all 0.15s ease; border:1px solid #c0392b; background:transparent;">
+          🚨 Cảnh tỉnh đặc biệt
+        </a>
       </div>
     </div>
 
     <!-- ===== CARD GRID ===== -->
     <div class="card-grid trail">
 
-      <!-- ===== MỤC CẢNH TỈNH ĐẶC BIỆT ===== -->
-
-      <!-- Bài 1: Cậu bé và bóng tối -->
-      <article class="situation-card" data-age="canh-tinh" style="border-left: 4px solid #c0392b;">
-        <div class="tags">
-          <span class="tag age" style="background:#c0392b; color:#fff; border:none;">🚨 CẢNH TỈNH</span>
-          <span class="tag">Xâm hại trẻ em</span>
-        </div>
-        <h3>Cậu bé và bóng tối</h3>
-        <p class="excerpt">Câu chuyện có thật về một cậu bé vị thành niên đã bị mẹ lạm dụng tình dục, và nỗi day dứt của người đã lắng nghe cậu.</p>
-        <a href="bai-viet/cau-be-va-bong-toi.html" class="read-more" style="color:#c0392b;">Đọc bài viết <span class="arrow">→</span></a>
-      </article>
-
-      <!-- Bài 2: Khi người thân trở thành kẻ xâm hại -->
-      <article class="situation-card" data-age="canh-tinh" style="border-left: 4px solid #8b1a1a;">
-        <div class="tags">
-          <span class="tag age" style="background:#8b1a1a; color:#fff; border:none;">🚨 CẢNH TỈNH</span>
-          <span class="tag">Xâm hại trẻ em</span>
-          <span class="tag">Loạn luân</span>
-        </div>
-        <h3>Khi "người thân" trở thành kẻ xâm hại</h3>
-        <p class="excerpt">Những buổi sáng kinh hoàng của một đứa trẻ bị chính dì ruột biến thành công cụ tình dục. Một lời cảnh tỉnh không thể bỏ qua.</p>
-        <a href="bai-viet/khi-nguoi-than-tro-thanh-ke-xam-hai.html" class="read-more" style="color:#8b1a1a;">Đọc bài viết <span class="arrow">→</span></a>
-      </article>
-
-      <!-- Bài 3: Cảnh báo lôi kéo qua tin nhắn -->
-      <article class="situation-card" data-age="canh-tinh" style="border-left: 4px solid #f39c12;">
-        <div class="tags">
-          <span class="tag age" style="background:#f39c12; color:#0a0606; border:none;">⚠️ CẢNH BÁO</span>
-          <span class="tag">Lừa đảo</span>
-          <span class="tag">Thao túng tâm lý</span>
-        </div>
-        <h3>Cảnh báo lôi kéo nguy hiểm qua tin nhắn</h3>
-        <p class="excerpt">Những câu chuyện "cứu con" được dàn dựng tinh vi để thao túng bạn — hãy đọc và chia sẻ để bảo vệ người khác.</p>
-        <a href="bai-viet/canh-bao-tin-nhan-lua-dao.html" class="read-more" style="color:#f39c12;">Đọc bài viết <span class="arrow">→</span></a>
-      </article>
-
-      <!-- ===== BÀI VIẾT THEO ĐỘ TUỔI ===== -->
-
-      <!-- Mầm non -->
+      <!-- ===== MẦM NON ===== -->
       <article class="situation-card" data-age="mam-non">
         <div class="tags">
           <span class="tag age">Mầm non</span>
@@ -137,7 +102,7 @@
         <a href="bai-viet/con-noi-khong-khong-cho-ban-muon.html" class="read-more">Đọc tình huống <span class="arrow">→</span></a>
       </article>
 
-      <!-- Tiểu học -->
+      <!-- ===== TIỂU HỌC ===== -->
       <article class="situation-card" data-age="tieu-hoc">
         <div class="tags">
           <span class="tag age">Tiểu học</span>
@@ -178,7 +143,7 @@
         <a href="bai-viet/con-bung-no-cam-xuc.html" class="read-more">Đọc tình huống <span class="arrow">→</span></a>
       </article>
 
-      <!-- Dậy thì -->
+      <!-- ===== DẬY THÌ ===== -->
       <article class="situation-card" data-age="day-thi">
         <div class="tags">
           <span class="tag age">Dậy thì</span>
@@ -199,7 +164,7 @@
         <a href="bai-viet/con-thi-rot-khong-muon-noi-chuyen.html" class="read-more">Đọc tình huống <span class="arrow">→</span></a>
       </article>
 
-      <!-- Thanh thiếu niên -->
+      <!-- ===== THANH THIẾU NIÊN ===== -->
       <article class="situation-card" data-age="thanh-thieu-nien">
         <div class="tags">
           <span class="tag age">Thanh thiếu niên</span>

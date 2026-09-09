@@ -41,13 +41,130 @@
   </div>
 </header>
 
+<!-- ===== POPUP CẢNH TỈNH ===== -->
+<div id="popupWarning" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.4s ease;
+">
+  <div style="
+    background: linear-gradient(145deg, #0f0a0a, #1a0f0a);
+    max-width: 520px;
+    width: 90%;
+    padding: 36px 32px 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(192, 57, 43, 0.15);
+    text-align: center;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  ">
+    <!-- Nút đóng -->
+    <button onclick="closePopup()" style="
+      position: absolute;
+      top: 12px; right: 16px;
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.2);
+      font-size: 24px;
+      cursor: pointer;
+      transition: color 0.2s;
+    " onmouseover="this.style.color='#f0ebe4'" onmouseout="this.style.color='rgba(255,255,255,0.2)'">✕</button>
+
+    <!-- Icon -->
+    <div style="font-size: 48px; margin-bottom: 8px;">🚨</div>
+    
+    <!-- Title -->
+    <h2 style="color: #f0ebe4; font-family: 'Fraunces', serif; font-size: 24px; font-weight: 700; margin: 0 0 6px;">
+      Cảnh tỉnh <span style="color: #c0392b;">đặc biệt</span>
+    </h2>
+    
+    <!-- Mô tả -->
+    <p style="color: #b0a090; font-size: 15px; line-height: 1.7; margin: 0 0 16px;">
+      Những câu chuyện về <strong style="color: #e2846c;">xâm hại, loạn luân, lừa đảo, thao túng tâm lý</strong> — đọc để bảo vệ bản thân và người thân.
+    </p>
+    
+    <!-- 3 badge nhỏ -->
+    <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 18px;">
+      <span style="background: rgba(192,57,43,0.08); color: #c0392b; padding: 4px 14px; border-radius: 999px; font-size: 11px; font-weight: 600; border: 1px solid rgba(192,57,43,0.08);">⚠️ Xâm hại</span>
+      <span style="background: rgba(192,57,43,0.08); color: #c0392b; padding: 4px 14px; border-radius: 999px; font-size: 11px; font-weight: 600; border: 1px solid rgba(192,57,43,0.08);">🚫 Loạn luân</span>
+      <span style="background: rgba(243,156,18,0.08); color: #f39c12; padding: 4px 14px; border-radius: 999px; font-size: 11px; font-weight: 600; border: 1px solid rgba(243,156,18,0.08);">🎯 Lừa đảo</span>
+    </div>
+    
+    <!-- Nút chính -->
+    <a href="canh-tinh-dac-biet.html" style="
+      display: inline-block;
+      background: #c0392b;
+      color: #fff;
+      padding: 12px 32px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      transition: background 0.2s;
+      font-family: 'Be Vietnam Pro', sans-serif;
+    " onmouseover="this.style.background='#8b1a1a'" onmouseout="this.style.background='#c0392b'">
+      📖 Vào thư viện cảnh tỉnh
+    </a>
+    
+    <!-- Nút bỏ qua -->
+    <button onclick="closePopup()" style="
+      display: block;
+      margin: 10px auto 0;
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.15);
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: underline;
+      transition: color 0.2s;
+    " onmouseover="this.style.color='rgba(255,255,255,0.3)'" onmouseout="this.style.color='rgba(255,255,255,0.15)'">
+      Bỏ qua
+    </button>
+  </div>
+</div>
+
+<style>
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+</style>
+
+<script>
+  // Hiển thị popup sau 1 giây khi trang load
+  document.addEventListener('DOMContentLoaded', function() {
+    // Kiểm tra xem đã từng đóng popup chưa (lưu vào localStorage)
+    if (!localStorage.getItem('popupClosed')) {
+      setTimeout(function() {
+        document.getElementById('popupWarning').style.display = 'flex';
+      }, 1000);
+    }
+  });
+
+  function closePopup() {
+    document.getElementById('popupWarning').style.display = 'none';
+    // Lưu trạng thái đã đóng để không hiện lại trong phiên này
+    localStorage.setItem('popupClosed', 'true');
+  }
+</script>
+<!-- ===== KẾT THÚC POPUP ===== -->
+
 <section class="hero">
   <svg class="hero-path" viewBox="0 0 1200 500" preserveAspectRatio="none" aria-hidden="true">
     <path d="M -50 420 C 200 340, 300 470, 550 380 S 900 200, 1250 260" fill="none" stroke="#C96A52" stroke-width="2" stroke-dasharray="1 14" stroke-linecap="round"/>
     <path d="M -50 120 C 250 60, 350 180, 600 100 S 950 -20, 1250 40" fill="none" stroke="#22384A" stroke-width="1.5" stroke-dasharray="1 12" stroke-linecap="round" opacity="0.4"/>
   </svg>
   <div class="wrap">
-          <span class="eyebrow">Nhật ký từ những buổi tư vấn thật</span>
+    <div>
+      <!-- ===== BANNER CẢNH BÁO ĐÃ XÓA ===== -->
+      
+      <span class="eyebrow">Nhật ký từ những buổi tư vấn thật</span>
       <h1>Ba mẹ không cần <em>hoàn hảo</em>,<br>chỉ cần không đơn độc.</h1>
       <p class="lede">Mỗi tuần, một tình huống thật mà ba mẹ mang đến cho tôi — được kể lại và gỡ rối dưới góc nhìn tâm lý, để lần sau con làm chị/anh sốc, mình đã có sẵn một hướng đi.</p>
       <div class="hero-actions">
@@ -55,7 +172,7 @@
         <a href="about.html" class="btn btn-ghost">Vì sao Tôi viết trang này?</a>
       </div>
     </div>
-    <div class="hero-note">
+    <div class="hero-note" style="transform: none;">
       <div class="label">Trích nhật ký tư vấn</div>
       <p>"Con không hư, con chỉ đang chưa có đủ từ để nói ra điều con sợ. Việc của mình là dịch lại, chứ không phải sửa lại."</p>
       <div class="signed">— Sophia, sau một buổi trò chuyện với một người mẹ có con lớp 3</div>
